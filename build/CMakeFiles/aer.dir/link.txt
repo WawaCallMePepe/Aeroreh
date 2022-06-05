@@ -1,0 +1,3 @@
+D:\PLs\PL\CMake\bin\cmake.exe -E rm -f CMakeFiles\aer.dir/objects.a
+D:\PLs\PL\MinGW\bin\ar.exe qc CMakeFiles\aer.dir/objects.a @CMakeFiles\aer.dir\objects1.rsp
+D:\PLs\PL\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\aer.dir/objects.a -Wl,--no-whole-archive -o aer.exe -Wl,--out-implib,libaer.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\aer.dir\linklibs.rsp

@@ -1,0 +1,2 @@
+D:\PLs\PL\MinGW\bin\ar.exe qc liblib.a CMakeFiles/lib.dir/src/lib/TAObjects.cpp.obj
+D:\PLs\PL\MinGW\bin\ranlib.exe liblib.a
