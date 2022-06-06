@@ -16,9 +16,9 @@ int main() {
 	
     
     airp1.LA.push_back(hel1);
-	airp1.LA.push_back(hel2);
-	airp1.LA.push_back(hel3);
-	airp1.LA.push_back(hel4);
+    airp1.LA.push_back(hel2);
+    airp1.LA.push_back(hel3);
+    airp1.LA.push_back(hel4);
     
 	
     airp1.Do(0.0, 15.0);
