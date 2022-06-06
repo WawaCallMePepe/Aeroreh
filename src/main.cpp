@@ -12,7 +12,7 @@ int main() {
     THelicopter* Hel1 = new THelicopter(0.0, 0.0, 10.0, 100.0, 100.0); 
     THelicopter* Hel2 = new THelicopter(0.0, 0.0, 10.0, 100.0, -100.0); 
     THelicopter* Hel3 = new THelicopter(0.0, 0.0, 10.0, -100.0, -100.0);     
-	THelicopter* Hel4 = new THelicopter(0.0, 0.0, 10.0, -100.0, 100.0); 
+    THelicopter* Hel4 = new THelicopter(0.0, 0.0, 10.0, -100.0, 100.0); 
 	
     
     airp1.LA.push_back(hel1);
