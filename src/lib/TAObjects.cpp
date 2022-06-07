@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int n = 4; // aircraft//helicopter
+const int n = 8; // aircraft//helicopter
 //const int k = 2; // useless now
 const float pi = 3.14159265359;
 int dt = 1;
@@ -80,7 +80,7 @@ void TLA::calculate() {
 
 	fi = b * pi + atan((y - yc) / (x - xc));
 
-	cout << "b = " << b << ", fi1 = " << fi << endl;
+	cout << endl << "b = " << b << ", fi1 = " << fi << endl;
 }
 
 
@@ -136,8 +136,8 @@ void TAircraft::move(float t, int a) {
 	// (1.4)
     float omega = - (V / R);
 	
-	x = -(xc + R * cos(fi + omega * t)) * (a - 1) + a * (x + V * dt);
-	y = -(yc + R * sin(fi + omega * t)) * (a - 1) + a * y;
+	this->xc = -(xc + R * cos(fi + omega * t)) * (a - 1) + a * (xc + V * dt);
+	this->yc = -(yc + R * sin(fi + omega * t)) * (a - 1) + a * yc;
 }
 
 
@@ -182,18 +182,16 @@ void THelicopter::update_landing(float airp_l) {
 }
 
 
-void TAirport::Do(float t0, float tk)
-{
-	for (int t = t0; t < tk; t += dt)
-	{
-		for (int i = 0; i < n; i++)
-		{			// n + k; i++)
+void TAirport::Do(float t0, float tk) {
+	for (int t = t0; t < tk; t += dt) {
+		for (int i = 0; i < n; i++) {			// n + k; i++)
 			int a = LA[i]->calculate_a(this->l, this->f);
 			LA[i]->calculate();
 			LA[i]->move(t, a);
 			LA[i]->udpate_landing(this->l);
 
 			cout << "(" << i + 1 << ")" << endl << "Do: " << endl << "t = " << t << ", a = " << a << ", landing - " << LA[i]->landing << ", xc = " << LA[i]->xc << ", yc = " << LA[i]->yc << endl;
+			cout << endl;
 		}
 	}
 }
