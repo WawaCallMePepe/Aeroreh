@@ -6,7 +6,7 @@ using namespace std;
 
  
 int main() {
-    TAirport airp1(0.0, 0.0, 130.0);
+    TAirport airp1(0.0, 0.0, 250.0);
     // TLA* TNP[4];
     // THelicopter Hel1(0.0, 0.0, 10.0, 100.0, 100.0); TNP[0] = &Hel1;
     // THelicopter Hel2(0.0, 0.0, 10.0, 100.0, -100.0); TNP[1] = &Hel2;
@@ -19,14 +19,14 @@ int main() {
     //     airp1.LA.push_back(TNP[i]);
     // }
     
-    THelicopter* Hel1 = new THelicopter(0.0, 0.0, 10.0, 100.0, 100.0); 
-    THelicopter* Hel2 = new THelicopter(0.0, 0.0, 10.0, 100.0, -100.0); 
-    THelicopter* Hel3 = new THelicopter(0.0, 0.0, 10.0, -100.0, -100.0);     
-    THelicopter* Hel4 = new THelicopter(0.0, 0.0, 10.0, -100.0, 100.0); 
-    TAircraft* Air1 = new TAircraft(0.0, 0.0, 15.0, 150.0, 150.0);
-    TAircraft* Air2 = new TAircraft(0.0, 0.0, 15.0, 150.0, -150.0);
+    THelicopter* Hel1 = new THelicopter(0.0, 0.0, 40.0, 60.0, 60.0);
+    THelicopter* Hel2 = new THelicopter(0.0, 0.0, 40.0, 60.0, -60.0);
+    THelicopter* Hel3 = new THelicopter(0.0, 0.0, 40.0, -60.0, -60.0);
+    THelicopter* Hel4 = new THelicopter(0.0, 0.0, 40.0, -60.0, 60.0);
+    TAircraft* Air1 = new TAircraft(0.0, 0.0, 10.0, 150.0, 150.0);
+    TAircraft* Air2 = new TAircraft(0.0, 0.0, 12.0, 150.0, -150.0);
     TAircraft* Air3 = new TAircraft(0.0, 0.0, 15.0, -150.0, -150.0);
-    TAircraft* Air4 = new TAircraft(0.0, 0.0, 15.0, -150.0, 150.0);
+    TAircraft* Air4 = new TAircraft(0.0, 0.0, 18.0, -150.0, 150.0);
 	
     airp1.LA.push_back(Hel1);
     airp1.LA.push_back(Hel2);
@@ -37,7 +37,7 @@ int main() {
     airp1.LA.push_back(Air3);
     airp1.LA.push_back(Air4);
 
-    airp1.Do(0.0, 18.0);
+    airp1.Do(0.0, 2.01);
 
     return 0;
 }

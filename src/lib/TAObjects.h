@@ -2,6 +2,7 @@
 #define TAObjects
 
 #include <iostream>
+#include <fstream>
 #include <cmath>
 #include <stdio.h>
 #include <vector>
@@ -10,11 +11,19 @@
 using namespace std;
 
 
+enum typeTLA {Aircraft, Helicopter};
+
+// struct coords {
+// 	float x, y;
+// };
+
 class TAObject {
 public:
 	float x;
 	float y;
+	// coords place;
 	bool f;
+	typeTLA spec;
 
 	TAObject();
 	TAObject(float x, float y);
@@ -38,7 +47,6 @@ public:
 	virtual void calculate();
 	virtual void move(float t, int a);
 	virtual int calculate_a(float airp_l, bool airp_f);
-	virtual void udpate_landing(float airp_l);
 };
 
 
@@ -61,7 +69,6 @@ public:
 
 	virtual void move(float t, int a);
 	int calculate_a(float airp_l, bool airp_f);
-	void update_landing(float airp_l);
 };
 
 
@@ -71,7 +78,6 @@ public:
 
 	virtual void move(float t, int a);
 	int calculate_a(float airp_l, bool airp_f);
-	void update_landing(float airp_l);
 };
 
 
